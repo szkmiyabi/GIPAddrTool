@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.getGIPAddrBtn = new System.Windows.Forms.Button();
             this.GIPAddrTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.proxyBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.proxyBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -82,17 +83,6 @@
             this.panel1.Size = new System.Drawing.Size(509, 58);
             this.panel1.TabIndex = 2;
             // 
-            // proxyBtn
-            // 
-            this.proxyBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.proxyBtn.Location = new System.Drawing.Point(207, 23);
-            this.proxyBtn.Name = "proxyBtn";
-            this.proxyBtn.Size = new System.Drawing.Size(107, 23);
-            this.proxyBtn.TabIndex = 3;
-            this.proxyBtn.Text = "プロキシ設定";
-            this.proxyBtn.UseVisualStyleBackColor = true;
-            this.proxyBtn.Click += new System.EventHandler(this.proxyBtn_Click);
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -104,6 +94,17 @@
             this.linkLabel1.Text = "IPアドレス確認君";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // proxyBtn
+            // 
+            this.proxyBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.proxyBtn.Location = new System.Drawing.Point(207, 23);
+            this.proxyBtn.Name = "proxyBtn";
+            this.proxyBtn.Size = new System.Drawing.Size(107, 23);
+            this.proxyBtn.TabIndex = 3;
+            this.proxyBtn.Text = "プロキシ設定";
+            this.proxyBtn.UseVisualStyleBackColor = true;
+            this.proxyBtn.Click += new System.EventHandler(this.proxyBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -111,6 +112,7 @@
             this.ClientSize = new System.Drawing.Size(509, 100);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "GlobalIPアドレスツール";
             this.tableLayoutPanel1.ResumeLayout(false);
