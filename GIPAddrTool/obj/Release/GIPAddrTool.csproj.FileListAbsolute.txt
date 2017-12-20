@@ -10,3 +10,4 @@ C:\Users\szkmiyabi\vs_project\GIPAddrTool\GIPAddrTool\obj\Release\GIPAddrTool.cs
 C:\Users\szkmiyabi\vs_project\GIPAddrTool\GIPAddrTool\obj\Release\GIPAddrTool.exe
 C:\Users\szkmiyabi\vs_project\GIPAddrTool\GIPAddrTool\obj\Release\GIPAddrTool.pdb
 C:\Users\szkmiyabi\vs_project\GIPAddrTool\GIPAddrTool\obj\Release\GIPAddrTool.csprojResolveAssemblyReference.cache
+C:\Users\szkmiyabi\vs_project\GIPAddrTool\GIPAddrTool\obj\Release\GIPAddrTool.SettingDialog.resources

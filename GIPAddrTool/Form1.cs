@@ -35,5 +35,10 @@ namespace GIPAddrTool
         {
             System.Diagnostics.Process.Start("http://www.ugtop.com/spill.shtml");
         }
+
+        private void FileMenuInSettingItem_Click(object sender, EventArgs e)
+        {
+            showSettingDialog();
+        }
     }
 }

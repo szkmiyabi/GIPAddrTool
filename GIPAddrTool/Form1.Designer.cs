@@ -35,8 +35,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.proxyBtn = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.FileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FileMenuInSettingItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -47,7 +51,7 @@
             this.tableLayoutPanel1.Controls.Add(this.getGIPAddrBtn, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.GIPAddrTxt, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -78,9 +82,9 @@
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.proxyBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 42);
+            this.panel1.Location = new System.Drawing.Point(0, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 58);
+            this.panel1.Size = new System.Drawing.Size(509, 69);
             this.panel1.TabIndex = 2;
             // 
             // linkLabel1
@@ -97,7 +101,7 @@
             // proxyBtn
             // 
             this.proxyBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.proxyBtn.Location = new System.Drawing.Point(207, 23);
+            this.proxyBtn.Location = new System.Drawing.Point(207, 34);
             this.proxyBtn.Name = "proxyBtn";
             this.proxyBtn.Size = new System.Drawing.Size(107, 23);
             this.proxyBtn.TabIndex = 3;
@@ -105,21 +109,52 @@
             this.proxyBtn.UseVisualStyleBackColor = true;
             this.proxyBtn.Click += new System.EventHandler(this.proxyBtn_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(509, 28);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // FileMenuItem
+            // 
+            this.FileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileMenuInSettingItem});
+            this.FileMenuItem.Name = "FileMenuItem";
+            this.FileMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.FileMenuItem.Text = "ファイル";
+            // 
+            // FileMenuInSettingItem
+            // 
+            this.FileMenuInSettingItem.Name = "FileMenuInSettingItem";
+            this.FileMenuInSettingItem.Size = new System.Drawing.Size(114, 26);
+            this.FileMenuInSettingItem.Text = "設定";
+            this.FileMenuInSettingItem.Click += new System.EventHandler(this.FileMenuInSettingItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 100);
+            this.ClientSize = new System.Drawing.Size(509, 139);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "GlobalIPアドレスツール";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -131,6 +166,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button proxyBtn;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem FileMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FileMenuInSettingItem;
     }
 }
 
