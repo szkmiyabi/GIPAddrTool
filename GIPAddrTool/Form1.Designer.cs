@@ -46,23 +46,25 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.getGIPAddrBtn, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.GIPAddrTxt, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 28);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(509, 42);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 34);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // getGIPAddrBtn
             // 
-            this.getGIPAddrBtn.Location = new System.Drawing.Point(3, 3);
+            this.getGIPAddrBtn.Location = new System.Drawing.Point(2, 2);
+            this.getGIPAddrBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.getGIPAddrBtn.Name = "getGIPAddrBtn";
-            this.getGIPAddrBtn.Size = new System.Drawing.Size(117, 27);
+            this.getGIPAddrBtn.Size = new System.Drawing.Size(88, 22);
             this.getGIPAddrBtn.TabIndex = 0;
             this.getGIPAddrBtn.Text = "IPアドレス調査";
             this.getGIPAddrBtn.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // 
             this.GIPAddrTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GIPAddrTxt.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.GIPAddrTxt.Location = new System.Drawing.Point(128, 3);
+            this.GIPAddrTxt.Location = new System.Drawing.Point(96, 2);
+            this.GIPAddrTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GIPAddrTxt.Name = "GIPAddrTxt";
-            this.GIPAddrTxt.Size = new System.Drawing.Size(378, 27);
+            this.GIPAddrTxt.Size = new System.Drawing.Size(315, 23);
             this.GIPAddrTxt.TabIndex = 1;
             // 
             // panel1
@@ -82,17 +85,19 @@
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.proxyBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 70);
+            this.panel1.Location = new System.Drawing.Point(0, 58);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 69);
+            this.panel1.Size = new System.Drawing.Size(413, 53);
             this.panel1.TabIndex = 2;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 27);
+            this.linkLabel1.Location = new System.Drawing.Point(9, 22);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(109, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(87, 12);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "IPアドレス確認君";
@@ -101,9 +106,10 @@
             // proxyBtn
             // 
             this.proxyBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.proxyBtn.Location = new System.Drawing.Point(207, 34);
+            this.proxyBtn.Location = new System.Drawing.Point(170, 25);
+            this.proxyBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.proxyBtn.Name = "proxyBtn";
-            this.proxyBtn.Size = new System.Drawing.Size(107, 23);
+            this.proxyBtn.Size = new System.Drawing.Size(80, 22);
             this.proxyBtn.TabIndex = 3;
             this.proxyBtn.Text = "プロキシ設定";
             this.proxyBtn.UseVisualStyleBackColor = true;
@@ -116,7 +122,8 @@
             this.FileMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(509, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(413, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -125,26 +132,27 @@
             this.FileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileMenuInSettingItem});
             this.FileMenuItem.Name = "FileMenuItem";
-            this.FileMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.FileMenuItem.Size = new System.Drawing.Size(53, 20);
             this.FileMenuItem.Text = "ファイル";
             // 
             // FileMenuInSettingItem
             // 
             this.FileMenuInSettingItem.Name = "FileMenuInSettingItem";
-            this.FileMenuInSettingItem.Size = new System.Drawing.Size(114, 26);
+            this.FileMenuInSettingItem.Size = new System.Drawing.Size(98, 22);
             this.FileMenuInSettingItem.Text = "設定";
             this.FileMenuInSettingItem.Click += new System.EventHandler(this.FileMenuInSettingItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 139);
+            this.ClientSize = new System.Drawing.Size(413, 111);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "GlobalIPアドレスツール";
             this.tableLayoutPanel1.ResumeLayout(false);
