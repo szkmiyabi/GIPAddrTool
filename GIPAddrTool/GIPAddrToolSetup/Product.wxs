@@ -1,30 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="GIPAddrToolSetup" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="26a99080-5b12-49f7-8387-327ca2546f20">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+	<Product Id="AFB55E55-D6C7-41E9-BFB5-9114FAAAF6F8" Name="GIPAddrTool" Language="1041" Version="1.3.0.0" Manufacturer="JCI-TN" UpgradeCode="26a99080-5b12-49f7-8387-327ca2546f20">
+		<Package Id="*" Manufacturer="JCI-TN" InstallerVersion="200" Compressed="yes" />
 
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+    <Media Id="1" Cabinet="Product.cab" EmbedCab="yes" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
 
-		<Feature Id="ProductFeature" Title="GIPAddrToolSetup" Level="1">
-			<ComponentGroupRef Id="ProductComponents" />
-		</Feature>
-	</Product>
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLDIR" Name="GIPAddrTool">
 
-	<Fragment>
-		<Directory Id="TARGETDIR" Name="SourceDir">
-			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="GIPAddrToolSetup" />
-			</Directory>
-		</Directory>
-	</Fragment>
+          <Component Id="Component1" Guid="CDE0D228-5BE4-4B37-9214-AE6C9814B338">
+            <File Id="GIPEXE" Name="GIPAddrTool.exe" KeyPath="yes" DiskId="1" Source="..\..\GIPAddrTool\bin\Release\GIPAddrTool.exe">
+              <Shortcut Id="startMenuGIP" Directory="ProgramMenuDir" Name="GIPAddrTool" WorkingDirectory="INSTALLDIR" Icon="GIPIcon.exe" IconIndex="0" Advertise="yes" />
+              <Shortcut Id="desktopGIP" Directory="DesktopFolder" Name="GIPAddrTool" WorkingDirectory="INSTALLDIR" Icon="GIPIcon.exe" IconIndex="0" Advertise="yes" />
+            </File>
+          </Component>
+          <Component Id="Component2" Guid="3B15B39D-D9B9-422C-B35C-3B44041F0595">
+            <File Id="HtmlAgilityPackDLL" Name="HtmlAgilityPack.dll" KeyPath="yes" DiskId="1" Source="..\..\GIPAddrTool\bin\Release\HtmlAgilityPack.dll">
+            </File>
+          </Component>
+        </Directory>
+      </Directory>
 
-	<Fragment>
-		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-			<!-- <Component Id="ProductComponent"> -->
-				<!-- TODO: Insert files, registry keys, and other resources here. -->
-			<!-- </Component> -->
-		</ComponentGroup>
-	</Fragment>
+      <Directory Id="ProgramMenuFolder" Name="Programs">
+        <Directory Id="ProgramMenuDir" Name="GIPAddrTool">
+          <Component Id="ProgramMenuDir" Guid="B6EF8FD1-172D-4C65-89C2-E4333F01FE3B">
+            <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+
+      <Directory Id="DesktopFolder" Name="Desktop" />
+
+    </Directory>
+
+    <Feature Id="Complete" Level="1">
+      <ComponentRef Id="Component1" />
+      <ComponentRef Id="Component2" />
+      <ComponentRef Id="ProgramMenuDir"/>
+    </Feature>
+
+    <Icon Id="GIPIcon.exe" SourceFile="..\..\GIPAddrTool\bin\Release\GIPAddrTool.exe" />
+
+  </Product>
 </Wix>
