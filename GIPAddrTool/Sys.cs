@@ -16,8 +16,7 @@ namespace GIPAddrTool
     {
         protected RegistryKey regkey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings", true);
         private Settings appSettings;
-        private static string filename = "settings.config";
-  
+        
         public void regProxyEdit()
         {
             int proxy_enable_status = (int)regkey.GetValue("ProxyEnable");
@@ -87,10 +86,13 @@ namespace GIPAddrTool
                 sr.Close();
 
             }
+            catch(FileNotFoundException exFileNotFound)
+            {
+                MessageBox.Show("設定ファイルが存在しません。このあと開くダイアログで設定を入力後にOKボタンをクリックすると自動的に" + filename + "を生成し、設定を保持できるようにします。");
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
             return appSettings;
         }

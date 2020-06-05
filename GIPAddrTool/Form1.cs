@@ -14,9 +14,15 @@ namespace GIPAddrTool
 {
     public partial class Form1 : Form
     {
+
+        private string filename;
+
         public Form1()
         {
             InitializeComponent();
+            filename = Application.UserAppDataPath + @"\settings.config";
+            if(System.IO.File.Exists(filename))
+                loadAppSettings();
         }
 
         private void getGIPAddrBtn_Click(object sender, EventArgs e)

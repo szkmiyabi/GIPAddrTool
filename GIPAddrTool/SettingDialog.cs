@@ -17,12 +17,13 @@ namespace GIPAddrTool
     {
 
         private Settings appSettings;
-        private static string filename = "settings.config";
+        private string filename;
 
         //コンストラクタ
         public SettingDialog()
         {
             InitializeComponent();
+            filename = Application.UserAppDataPath + @"\settings.config";
             appSettings = new Settings();
             loadSettings();
         }
@@ -63,10 +64,14 @@ namespace GIPAddrTool
                 sr.Close();
                 proxyIPAddress.Text = appSettings.proxy_address;
                 portNumber.Text = appSettings.port_number;
-            } catch(Exception ex)
+            }
+            catch (FileNotFoundException exFileNotFound)
+            {
+                MessageBox.Show("設定ファイルが存在しません。このあと開くダイアログで設定を入力後にOKボタンをクリックすると自動的に" + filename + "を生成し、設定を保持できるようにします。");
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
         }
         //環境設定を削除する
